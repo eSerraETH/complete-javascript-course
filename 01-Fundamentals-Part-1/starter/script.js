@@ -84,7 +84,7 @@ johnBMI = johnMass / johnHeight ** 2;
 const isHeavier = markBMI > johnBMI;
 console.log(markMass, markHeight, markBMI, johnMass, johnHeight, johnBMI);
 console.log(isHeavier);
-*/
+
 
 //String and templates
 
@@ -95,15 +95,119 @@ const year = 2020
 const jonas = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
 console.log(jonas);
 
-const jonasNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`; //{ctrl + alt + 1xGauche ENTER}, `1xGauche ENTER` 
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`; //{ctrl + alt + 1xGauche ENTER}, `1xGauche ENTER`
 console.log(jonasNew);
 console.log(`N'importe quel String...`);
 
 //legacy
+
 console.log(`String with \n\
 multiple \n\
 lines`);
-//Maintenat = ENTER
+
+//Maintenant = ENTER
+
 console.log(`String with
 multiple
 lines`);
+
+
+
+//Taking decisions
+
+const age = 15;
+//if (true) code is executed
+if (age >= 18) {
+    console.log("Ely peut faire son permis!")
+} else { //else doit suivre la dernière "}"
+    const yearsLeft = 18 - age;
+    console.log(`Ely est trop jeune. Il doit attendre
+     ${yearsLeft} ans`);
+}
+
+//structure if/else :
+
+/*if () {
+
+} else {
+
+}*/
+
+/*
+const birthYear = 1999;
+let century; //Need to define variable avant {}
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
+
+
+//Coding Challenge #2
+
+const markMass = 60;
+const johnMass = 95;
+
+const markHeight = 1.69;
+const johnHeight = 1.95;
+
+let markBMI, JohnBMI;
+markBMI = markMass / markHeight ** 2;
+johnBMI = johnMass / johnHeight ** 2;
+
+const isHeavier = markBMI > johnBMI;
+//console.log(markMass, markHeight, markBMI, johnMass, johnHeight, johnBMI);
+//console.log(isHeavier);
+
+if (isHeavier) {
+    console.log(`Mark's BMI (${markBMI})
+    is higher than John's BMI (${johnBMI})!`)
+} else {
+    console.log(`John's BMI (${johnBMI})
+    is higher than Mark's BMI (${markBMI})!`)
+};
+
+
+//Type Conversion & Coercion
+
+const inputYear = "1999";
+//console.log(Number(inputYear));
+console.log(Number("Ely")); //NaN (doesn't work)
+console.log(typeof NaN); // =Number, mais invalide
+console.log(String(23));
+
+console.log("I am " + 23 + " years old"); // 23 Coercion into a "string"
+console.log("23" - "10" - 3); // Coercion into values
+console.log("23" * "2"); // Coercion into values
+console.log("23" > "18"); // Coercion into values
+
+let n = "1" + 1; // ="11"
+n = n - 1; // = 10
+2 + 3 + 4 + "5" // = 95
+*/
+
+//Truthy and falsy values
+
+// 5 falsy values : 0 , "", undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Ely"));
+console.log(Boolean({})); //empty object = true
+
+const money = 0; // 0 is converted to false
+if (money) {
+    console.log("Don't spend it all!")
+} else {
+    console.log("You should get a job")
+}
+
+let height = 0; // false, even though it's defined to "0" bug?
+if (height) {
+    console.log("YAY! Height is defined")
+} else {
+    console.log("Height is undefined!")
+}
+
+// Equality operators
