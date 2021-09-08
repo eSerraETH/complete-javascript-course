@@ -185,7 +185,7 @@ console.log("23" > "18"); // Coercion into values
 let n = "1" + 1; // ="11"
 n = n - 1; // = 10
 2 + 3 + 4 + "5" // = 95
-*/
+
 
 //Truthy and falsy values
 
@@ -210,4 +210,86 @@ if (height) {
     console.log("Height is undefined!")
 }
 
+
 // Equality operators
+
+const age = 18;
+if (age === 18) console.log("You just became an adult"); // 18 === 18 is true
+// "strict" === no type coercion "18" === 18 (false)
+// "loose" == type coercion "18" == 18 (true) , loose should be avoided, causes many bugs
+
+const favourite = prompt("What is your favorite number?")
+console.log(favourite);
+console.log(typeof favourite); //string
+if (favourite == 23) { //type coercion to transform "23" into 23
+    console.log("Cool woo!")
+}
+ //if (favourite === 23) {
+ //   console.log ("Cool woo!") fonctionnerait pas
+}
+//il faut changer favourite pour un number pour utiliser ===
+
+const favourite = Number(prompt("What is your favorite number?"));
+console.log(favourite);
+console.log(typeof favourite); //number
+if (favourite === 23) {
+    console.log("23 is cool woo!")
+} else if (favourite === 7) {
+    console.log("7 is cool too woo!")
+} else {
+    console.log("Your favourite number is not 23 or 7")
+}
+
+if (favourite !== 23) console.log("Why not 23?"); //!== est équivalent à === (mais contraire)
+
+
+//Logical Operators
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision); //and
+console.log(hasDriversLicense || hasGoodVision); //or
+console.log(!hasDriversLicense); //not
+
+if (hasDriversLicense && hasGoodVision) {
+    console.log("Sarah can drive")
+} else {
+    console.log("Someone else should drive")
+}
+
+const isTired = true // C
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah can drive")
+} else {
+    console.log("Someone else should drive")
+}
+
+
+//Coding Challenge #3
+
+const dolphinsGameOne = 96;
+const dolphinsGameTwo = 108;
+const dolphinsGameThree = 89;
+
+const koalasGameOne = 88;
+const koalasGameTwo = 91;
+const koalasGameThree = 110;
+
+const dolphinsAverage = ((dolphinsGameOne + dolphinsGameTwo + dolphinsGameThree) / 3);
+const koalasAverage = ((koalasGameOne + koalasGameTwo + koalasGameThree) / 3);
+
+if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
+    console.log("Dolphins win!")
+} else if (dolphinsAverage === koalasAverage && (dolphinsAverage && koalasAverage) >= 100) {
+    console.log("It's a draw!")
+} else if (koalasAverage > dolphinsAverage && koalasAverage >= 100) {
+    console.log("Koalas win!")
+} else {
+    console.log("Nobody wins!")
+}
+*/
+
+//The switch Statement
+
