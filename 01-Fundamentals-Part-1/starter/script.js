@@ -337,4 +337,16 @@ if (day === "monday") {
     console.log("Not a valid day");
 }
 
+// Statements and expression
+
+3 + 4 //this is an expression
+1999 //"
+true && false && !false //"
+
+if (23>10){ //if else is a statement, switch is a statement
+    const str = "23 is bigger"; //string is an expression, values are expressions
+}
 */
+
+// The Conditional (Ternary) Operator
+
