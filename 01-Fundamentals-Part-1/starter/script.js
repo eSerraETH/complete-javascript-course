@@ -69,7 +69,6 @@ console.log(x, y);
 const averageAge = (ageEly + ageThom) / 2;
 console.log(ageEly, ageThom, averageAge);
 
-
 //Coding Challenge #1
 const markMass = 78;
 const johnMass = 95;
@@ -127,13 +126,13 @@ if (age >= 18) {
 
 //structure if/else :
 
-/*if () {
+if () {
 
 } else {
 
-}*/
+}* /
 
-/*
+
 const birthYear = 1999;
 let century; //Need to define variable avant {}
 if (birthYear <= 2000) {
@@ -269,7 +268,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 
 //Coding Challenge #3
 
-const dolphinsGameOne = 96;
+const dolphinsGameOne = 300;
 const dolphinsGameTwo = 108;
 const dolphinsGameThree = 89;
 
@@ -289,7 +288,53 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
 } else {
     console.log("Nobody wins!")
 }
+
+
+
+//The switch statement
+
+const day = "saturday";
+
+switch (day) {
+    case "monday": //day ==="monday"
+        console.log("Arms day");
+        console.log("Eat food")
+        break; //break to stop code from running
+    case "tuesday":
+        console.log("Leg Day")
+        break;
+    case "wednesday":
+    case "thursday":
+        console.log("Rest day");
+        break
+    case "friday":
+        console.log("Back & Shoulders")
+        break
+    case "saturday":
+    case "sunday":
+        console.log("Have fun");
+        break
+    default:
+        console.log("Not a valid day")
+
+}
+
+// challenge in video
+
+const day = "sunday"
+if (day === "monday") {
+    console.log("Arms day");
+    console.log("Eat food")
+} else if (day === "tuesday") {
+    console.log("Leg Day")
+} else if (day === "wednesday" || "thursday") {
+    console.log("Rest day")
+} else if (day === "friday") {
+    console.log("Back & Shoulders")
+} else if (day === "saturday" || "sunday") {
+    console.log("Have fun")
+} else {
+    console.log("Not a valid day");
+}
+
 */
-
-//The switch Statement
-
