@@ -295,7 +295,7 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
 
 const day = "saturday";
 
-switch (day) {
+stwich (day) {
     case "monday": //day ==="monday"
         console.log("Arms day");
         console.log("Eat food")
@@ -346,7 +346,28 @@ true && false && !false //"
 if (23>10){ //if else is a statement, switch is a statement
     const str = "23 is bigger"; //string is an expression, values are expressions
 }
-*/
 
 // The Conditional (Ternary) Operator
 
+const age = 19
+age >= 18 ? console.log("I can drink wine!") : console.log("I can drink water!");
+
+const drink = age >= 18 ? "wine!" : "water!";
+console.log(drink);
+
+let drink2;
+if (age >= 18) {
+    drink2 = "wine!"
+} else {
+    drink2 = "water!"
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "wine!" : "water!"}`); //drink fonctionne aussi
+
+// Coding Challenge #4
+
+const bill = 275
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+console.log(bill, tip, bill + tip)
+*/
