@@ -10,7 +10,6 @@ if (passTest) hasDriverLicense = true //erreur volontaire pour test strict mode
 if (hasDriversLicense) console.log("I can drive");
 
 const interface = "Audio";
-*/
 
 // Functions
 
@@ -33,3 +32,27 @@ console.log(fruitProcessor(5, 0))
 
 const appleOrangeJuice = fruitProcessor(2, 2);
 console.log(appleOrangeJuice);
+
+// Function declaration and expressions
+
+//function declaration
+
+function calcAge1(birthYear) { //can call a declaration before defining it
+    return 2021 - birthYear;
+}
+
+const age1 = calcAge1(1999);
+console.log(age1)
+
+//function expression
+
+const calcAge2 = function (birthYear) { //expression hold a value
+    return 2021 - birthYear;
+}
+
+const age2 = calcAge2(1999);
+console.log(age2);
+*/
+
+//Arrow functions
+
