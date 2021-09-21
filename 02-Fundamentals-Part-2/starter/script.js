@@ -52,7 +52,33 @@ const calcAge2 = function (birthYear) { //expression hold a value
 
 const age2 = calcAge2(1999);
 console.log(age2);
-*/
+
 
 //Arrow functions
 
+const calcAge2 = function (birthYear) { //expression hold a value
+    return 2021 - birthYear;
+}
+
+const calcAge3 = birthYear => 2021 - birthYear;
+const age3 = calcAge3(1999);
+console.log(calcAge3(1999)); //log sans save la value
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2021 - (birthYear)
+    const retirement = 65 - age
+    //return retirement
+    return `${firstName} retires in ${retirement} years`;
+}
+
+console.log(yearsUntilRetirement(1999, "Ely"));
+console.log(yearsUntilRetirement(1980, "John"));
+*/
+
+//Functions calling other functions
+
+function fruitProcessor(apples, oranges) {
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+    return juice;
+}
