@@ -74,7 +74,6 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1999, "Ely"));
 console.log(yearsUntilRetirement(1980, "John"));
-*/
 
 //Functions calling other functions
 
@@ -91,6 +90,74 @@ function fruitProcessor(apples, oranges) {
 
 console.log(fruitProcessor(2, 3));
 
-//Reviewing Functions
+//Coding Challenge #1
+
+const calcAverage = (scoreOne, scoreTwo, scoreThree) => ((scoreOne + scoreTwo + scoreThree) / 3)
+
+const dolphinsAverage1 = calcAverage(44, 23, 71);
+const koalasAverage1 = calcAverage(65, 54, 49);
+
+const dolphinsAverage2 = calcAverage(85, 54, 41);
+const koalasAverage2 = calcAverage(23, 34, 27);
 
 
+
+function checkWinner(dolphinsAverage, koalasAverage) {
+    if (dolphinsAverage >= (koalasAverage * 2)) {
+        return `Dolphins win! ${dolphinsAverage} vs ${koalasAverage}`
+    } else if (koalasAverage >= (dolphinsAverage * 2)) {
+        return `Koalas win! ${koalasAverage} vs ${dolphinsAverage}`
+    } else {
+        return `Nobody wins!`;
+    }
+}
+
+console.log(checkWinner(dolphinsAverage1, koalasAverage1)
+)
+console.log(checkWinner(dolphinsAverage2, koalasAverage2)
+)
+
+//Introduction to arrays
+
+const friend1 = "John"
+const friend2 = "Thom"
+const friend3 = "Joblo"
+
+const friends = ["John", "Thom", "Joblo"];
+console.log(friends);
+
+const years = new Array(1999, 2000, 2001, 2002); //same thing, used less
+
+console.log(friends[0]) //array commence par 0 (pas 1)
+console.log(friends[2]);
+console.log(friends.length); // 3
+console.log(friends[friends.length - 1]) //avoir le dernier
+
+friends[2] = "Bob" //mutate array
+console.log(friends)
+// friends = ["Tony" , "Jason"] peut pas mutate TOUT l'array
+
+const firstName = "Ely"
+const ely = [firstName, "Serra", 2021 - 1999, "programmer", friends]; //array in arrays
+console.log(ely)
+
+//Exercise
+
+function calcAge(birthYear) {
+    return 2021 - birthYear
+}
+
+const years = [2005, 2010, 2011, 2015];
+
+console.log(calcAge(years)); // NaN , dans fonction peut pas faire 2021 - array
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[2]);
+const age4 = calcAge(years[3]);
+console.log(age1, age2, age3, age4);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[years.length - 1])];
+console.log(ages);
+
+*/
