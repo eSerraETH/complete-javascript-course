@@ -295,7 +295,7 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
 
 const day = "saturday";
 
-stwich (day) {
+switch (day) {
     case "monday": //day ==="monday"
         console.log("Arms day");
         console.log("Eat food")

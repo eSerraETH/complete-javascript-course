@@ -160,4 +160,46 @@ console.log(age1, age2, age3, age4);
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[years.length - 1])];
 console.log(ages);
 
+//Basic Array Methods
+
+const friends = ["John", "Thom", "Joblo"];
+const newLength = friends.push("Jay"); //.push adds element at the end of array
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("Will");//.unshift adds element at the beginning of array
+console.log(friends);
+
+friends.pop(); //opposite of .push
+const popped = friends.pop(); //shows popped string/value
+console.log(friends);
+console.log(popped);
+
+friends.shift(); //opposite of .unshift
+console.log(friends);
+
+console.log(friends.indexOf("John")); //.indexOf tells position in Array
+
+console.log(friends.includes("John")); //.includes tells true/false if string is in array or not
+//doesnt do type coercion, si 23 est dans le array, .includes("23") = false
+
+if (friends.includes("John")) {
+    console.log("You have a friend called John");
+}
+
+//Coding Challenge #2
+
+function calcTip(bill) {
+    const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+    return tip
+}
+console.log(calcTip(100));
+
+const bills = [125, 555, 44]
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+
+console.log(total[0]);
 */
